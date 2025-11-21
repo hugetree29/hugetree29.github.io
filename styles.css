@@ -187,6 +187,12 @@ main {
     margin-top: 2rem;
 }
 
+.app-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .app-item {
     background: white;
     padding: 2.5rem;
@@ -194,6 +200,7 @@ main {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     border: 2px solid transparent;
+    cursor: pointer;
 }
 
 .app-item:hover {
@@ -214,6 +221,18 @@ main {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+}
+
+.learn-more {
+    color: #667eea;
+    font-weight: 600;
+    font-size: 1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.app-item:hover .learn-more {
+    transform: translateX(5px);
 }
 
 .store-links {
@@ -245,6 +264,99 @@ main {
 .app-link:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.app-link.primary {
+    margin: 0.5rem;
+}
+
+/* App Detail Pages */
+.app-detail {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.app-header .feature-icon {
+    font-size: 5rem;
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.app-header h1 {
+    font-size: 3rem;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.app-description,
+.app-features {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.app-description h2,
+.app-features h2 {
+    color: #667eea;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.app-description p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+.app-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.app-features li {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 2;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.app-features li::before {
+    content: "✓";
+    color: #667eea;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.back-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    display: inline-block;
+}
+
+.back-link a:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+    transform: translateX(-5px);
 }
 
 /* Contact Block */
@@ -346,5 +458,31 @@ footer a:hover {
     .feature-card,
     .app-item {
         padding: 2rem;
+    }
+
+    .app-header .feature-icon {
+        font-size: 3.5rem;
+    }
+
+    .app-header h1 {
+        font-size: 2rem;
+    }
+
+    .app-description,
+    .app-features {
+        padding: 1.5rem;
+    }
+
+    .app-description h2,
+    .app-features h2 {
+        font-size: 1.5rem;
+    }
+
+    .store-links {
+        flex-direction: column;
+    }
+
+    .store-links .app-link {
+        width: 100%;
     }
 }
