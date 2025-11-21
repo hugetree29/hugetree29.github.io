@@ -216,6 +216,20 @@ main {
     margin-bottom: 1.5rem;
 }
 
+.store-links {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.store-links .app-link {
+    flex: 0 1 auto;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+}
+
 .app-link {
     display: inline-block;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
